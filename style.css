@@ -251,14 +251,34 @@ header, main, footer{
   gap: 1rem;
   align-self: flex-end;
   padding-bottom: 1rem;
-}
+  width: 25vw;
 
-.firstnav a{
-  color: var(--text-invert);
-  background-color: rgba(236,255,235,0.14);
-  padding: 0.7rem 1.5rem;
-  text-decoration: none;
-  border-radius: 2rem;
+  
+}
+.firstnav > div{
+  background-color: var(--chip);
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  height: 50px;
+  padding: 0.7rem 1rem;
+  border-radius: 0.5rem;
+  align-items: center;
+  width: 100%;
+  border: 2px solid var(--border)
+}
+.firstnav img{
+  height: 80%;
+  width: auto;
+}
+.firstnav input{
+  border: none;
+  border-left:  1px solid #ECFFEB;
+  background-color: transparent;
+  outline: none;
+  color: #ECFFEB;
+  padding: 0.5rem;
+  width: 100%;
 }
 
 /* -------------------------
