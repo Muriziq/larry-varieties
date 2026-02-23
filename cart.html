@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+      <header class="site-header">
+    <div class="logo">LV</div>
+
+    <!-- Primary site navigation -->
+    <nav aria-label="Primary">
+      <a href="index.html">Home</a>
+      <a href="shop.html">Shop</a>
+      <a href="shop.html#categories">Categories</a>
+      <a href="seller.html">Sell</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <div class="icon-btn">
+      <!-- Account -->
+      <a title="Account" href="account.html">
+        <img src="images/Group 49.svg" alt="Account" />
+      </a>
+
+      <!-- Cart -->
+      <a title="Cart" href="cart.html">
+        <img src="images/Group.svg" alt="Cart" />
+        <span class="cart-count">2</span>
+      </a>
+
+      <!-- ✅ Dark mode toggle (manual) -->
+      <button class="theme-toggle" type="button" id="themeToggle" aria-pressed="false" title="Toggle dark mode">
+        🌓
+      </button>
+    </div>
+  </header>
+
+    <main class="cmain">
+        <div class="c-container">
+  <div>
+    <div class="c-section-title">
+      <h2>Your Cart</h2>
+      <p>Review items before checkout</p>
+    </div>
+
+    <div class="c-two-col">
+      <!-- LEFT: Cart items -->
+      <div class="c-glass c-soft c-p-20">
+        <div class="c-cart-item">
+          <img
+            alt=""
+            src="images/Oliver Sofa (72_ 1.svg"
+          />
+
+          <div class="c-flex-1">
+            <h4>2L Power Blender</h4>
+            <div class="c-meta">Color: Black • Capacity: 2L</div>
+            <div class="c-meta"><strong class="c-price">₦28,500</strong></div>
+          </div>
+
+          <div class="c-qty">
+            <button type="button">-</button>
+            <input class="c-input" value="1" />
+            <button type="button">+</button>
+          </div>
+
+          <button type="button" class="c-btn c-btn-danger">Remove</button>
+        </div>
+
+        <div class="c-spacer-10"></div>
+
+        <div class="c-cart-item">
+          <img
+            alt=""
+            src="images/Oliver Sofa (72_ 1.svg"
+          />
+
+          <div class="c-flex-1">
+            <h4>Utensil Set (12 pcs)</h4>
+            <div class="c-meta">Material: Silicone</div>
+            <div class="c-meta"><strong class="c-price">₦6,500</strong></div>
+          </div>
+
+          <div class="c-qty">
+            <button type="button">-</button>
+            <input class="c-input" value="1" />
+            <button type="button">+</button>
+          </div>
+
+          <button type="button" class="c-btn c-btn-danger">Remove</button>
+        </div>
+      </div>
+
+      <!-- RIGHT: Summary -->
+      <aside class="c-summary">
+        <h3 class="c-summary-title">Order Summary</h3>
+
+        <div class="c-small c-summary-row"><span>Subtotal</span><span>₦35,000</span></div>
+        <div class="c-small c-summary-row"><span>Delivery</span><span>₦1,500</span></div>
+        <div class="c-small c-summary-row"><span>Discount</span><span>-₦0</span></div>
+
+        <hr class="c-hr"/>
+
+        <div class="c-summary-total">
+          <span>Total</span><span>₦36,500</span>
+        </div>
+
+        <div class="c-coupon">
+          <label>Coupon</label>
+          <div class="c-coupon-row">
+            <input class="c-input" placeholder="e.g. LARRY10" />
+            <button type="button" class="c-btn">Apply</button>
+          </div>
+        </div>
+
+        <div class="c-summary-actions">
+          <a class="c-btn c-btn-primary" href="checkout.html">Proceed to checkout</a>
+          <a class="c-btn" href="shop.html">Continue shopping</a>
+        </div>
+      </aside>
+    </div>
+  </div>
+</div>
+    </main>
+          <div class="asmall">© <span id="y"></span> Larry Varieties Stores</div>
+
+</body>
+</html>

@@ -1,0 +1,410 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<!--
+  data-theme controls manual theming:
+  - "light" or "dark"
+  If empty, CSS will follow system preference (prefers-color-scheme).
+-->
+<body data-theme="" data-page="index">
+  <!-- ✅ HEADER is now a direct child of body (semantic + correct) -->
+  <header class="site-header">
+    <div class="logo">LV</div>
+
+    <!-- Primary site navigation -->
+    <nav aria-label="Primary">
+      <a href="index.html">Home</a>
+      <a href="shop.html">Shop</a>
+      <a href="shop.html#categories">Categories</a>
+      <a href="seller.html">Sell</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <div class="icon-btn">
+      <!-- Account -->
+      <a title="Account" href="account.html">
+        <img src="images/Group 49.svg" alt="Account" />
+      </a>
+
+      <!-- Cart -->
+      <a title="Cart" href="cart.html">
+        <img src="images/Group.svg" alt="Cart" />
+        <span class="cart-count">2</span>
+      </a>
+
+      <!-- ✅ Dark mode toggle (manual) -->
+      <button class="theme-toggle" type="button" id="themeToggle" aria-pressed="false" title="Toggle dark mode">
+        🌓
+      </button>
+    </div>
+  </header>
+
+  <!-- ✅ MAIN wrapper for the page content (semantic) -->
+  <main>
+    <article class="first">
+      <div>
+        <!-- Secondary navigation for featured categories -->
+        <nav class="firstnav" aria-label="Featured categories">
+          <a href="">Blender</a>
+          <a href="">Cookwares</a>
+          <a href="">Refrigerator</a>
+        </nav>
+
+        <!-- Hero section -->
+        <section class="first2">
+          <canvas></canvas>
+          <h3>Larry Varieties Stores</h3>
+          <h1>Everything for your kitchen <br /> — in one store.</h1>
+
+          <p>
+            Shop quality blenders, pots & pans, knives, plates, storage containers, <br />
+            and everyday utensils at affordable prices.
+          </p>
+
+          <div class="first21">
+            <button type="button">Shop Now</button>
+            <button type="button">Become a Seller</button>
+          </div>
+        </section>
+
+        <!-- Featured products row -->
+        <section class="first3" aria-label="Featured products">
+          <div>
+            <div>
+              <img src="images/Oliver Sofa (72_ 1.svg" alt="2L Power Blender" />
+            </div>
+            <div>
+              <h3>2L Power Blender</h3>
+              <p>Smoothies, pepper grinding, and blending made easy with strong blades and a durable jar</p>
+            </div>
+            <h3>₦28,500</h3>
+          </div>
+
+          <div>
+            <div>
+              <img src="images/Oliver Sofa (72_ 1.svg" alt="2L Power Blender" />
+            </div>
+            <div>
+              <h3>2L Power Blender</h3>
+              <p>Smoothies, pepper grinding, and blending made easy with strong blades and a durable jar</p>
+            </div>
+            <h3>₦28,500</h3>
+          </div>
+
+          <div>
+            <div>
+              <img src="images/Oliver Sofa (72_ 1.svg" alt="2L Power Blender" />
+            </div>
+            <div>
+              <h3>2L Power Blender</h3>
+              <p>Smoothies, pepper grinding, and blending made easy with strong blades and a durable jar</p>
+            </div>
+            <h3>₦28,500</h3>
+          </div>
+        </section>
+      </div>
+    </article>
+
+    <article class="second">
+        <section class="second2" id="categories">
+          <h2>Shop By Category</h2>
+
+          <div class="grid-3">
+            <a class="glass-category-card" href="shop.html">
+              <div class="thumb"><img src="images/Oliver Sofa (72_ 1.svg" alt="" /></div>
+              <div>
+                <h3>Blenders & Mixers</h3>
+                <p>Smoothies, pepper, and more</p>
+              </div>
+            </a>
+
+            <a class="glass-category-card" href="shop.html">
+              <div class="thumb"><img src="images/Oliver Sofa (72_ 1.svg" alt="" /></div>
+              <div>
+                <h3>Pots & Pans</h3>
+                <p>Non-stick, stainless, sets</p>
+              </div>
+            </a>
+
+            <a class="glass-category-card" href="shop.html">
+              <div class="thumb"><img src="images/Oliver Sofa (72_ 1.svg" alt="" /></div>
+              <div>
+                <h3>Knives & Boards</h3>
+                <p>Chop, slice, prep</p>
+              </div>
+            </a>
+
+            <a class="glass-category-card" href="shop.html">
+              <div class="thumb"><img src="images/Oliver Sofa (72_ 1.svg" alt="" /></div>
+              <div>
+                <h3>Plates & Bowls</h3>
+                <p>Dining essentials</p>
+              </div>
+            </a>
+
+            <a class="glass-category-card" href="shop.html">
+              <div class="thumb"><img src="images/Oliver Sofa (72_ 1.svg" alt="" /></div>
+              <div>
+                <h3>Utensils</h3>
+                <p>Spoons, ladles, spatulas</p>
+              </div>
+            </a>
+
+            <a class="glass-category-card" href="shop.html">
+              <div class="thumb"><img src="images/Oliver Sofa (72_ 1.svg" alt="" /></div>
+              <div>
+                <h3>Storage Containers</h3>
+                <p>Fresh, sealed, organized</p>
+              </div>
+            </a>
+          </div>
+        </section>
+
+        <!-- Deals section -->
+        <section class="second3" id="deals">
+          <canvas></canvas>
+
+          <div>
+            <h2>Deals & best sellers</h2>
+            <div>
+              <section class="second31" aria-label="Deals carousel 1">
+                <section class="second-cardsec">
+                  <div><img src="images/Oliver Sofa (72_ 1.svg" alt="" /></div>
+                  <div>
+                    <h3>2L Power Blender</h3>
+                    <div class="shape">
+                      <img src="images/Shape.svg" alt="" />
+                      <img src="images/Shape.svg" alt="" />
+                      <img src="images/Shape.svg" alt="" />
+                      <img src="images/Shape.svg" alt="" />
+                      <img src="images/Shape.svg" alt="" />
+                    </div>
+                    <h3>₦28,500</h3>
+                    <div class="card-button">
+                      <button type="button">Add To Cart</button>
+                      <button type="button" aria-label="Add to wishlist"><img src="images/Union.svg" alt="" /></button>
+                    </div>
+                  </div>
+                </section>
+
+                <section class="second-cardsec">
+                  <div><img src="images/Oliver Sofa (72_ 1.svg" alt="" /></div>
+                  <div>
+                    <h3>2L Power Blender</h3>
+                    <div class="shape">
+                      <img src="images/Shape.svg" alt="" />
+                      <img src="images/Shape.svg" alt="" />
+                      <img src="images/Shape.svg" alt="" />
+                      <img src="images/Shape.svg" alt="" />
+                      <img src="images/Shape.svg" alt="" />
+                    </div>
+                    <h3>₦28,500</h3>
+                    <div class="card-button">
+                      <button type="button">Add To Cart</button>
+                      <button type="button" aria-label="Add to wishlist"><img src="images/Union.svg" alt="" /></button>
+                    </div>
+                  </div>
+                </section>
+
+                <section class="second-cardsec">
+                  <div><img src="images/Oliver Sofa (72_ 1.svg" alt="" /></div>
+                  <div>
+                    <h3>2L Power Blender</h3>
+                    <div class="shape">
+                      <img src="images/Shape.svg" alt="" />
+                      <img src="images/Shape.svg" alt="" />
+                      <img src="images/Shape.svg" alt="" />
+                      <img src="images/Shape.svg" alt="" />
+                      <img src="images/Shape.svg" alt="" />
+                    </div>
+                    <h3>₦28,500</h3>
+                    <div class="card-button">
+                      <button type="button">Add To Cart</button>
+                      <button type="button" aria-label="Add to wishlist"><img src="images/Union.svg" alt="" /></button>
+                    </div>
+                  </div>
+                </section>
+              </section>
+            </div>
+          </div>
+
+          <div>
+            <h2>Deals & best sellers</h2>
+            <div>
+              <section class="second31" aria-label="Deals carousel 2">
+                <section class="second-cardsec">
+                  <div><img src="images/Oliver Sofa (72_ 1.svg" alt="" /></div>
+                  <div>
+                    <h3>2L Power Blender</h3>
+                    <div class="shape">
+                      <img src="images/Shape.svg" alt="" />
+                      <img src="images/Shape.svg" alt="" />
+                      <img src="images/Shape.svg" alt="" />
+                      <img src="images/Shape.svg" alt="" />
+                      <img src="images/Shape.svg" alt="" />
+                    </div>
+                    <h3>₦28,500</h3>
+                    <div class="card-button">
+                      <button type="button">Add To Cart</button>
+                      <button type="button" aria-label="Add to wishlist"><img src="images/Union.svg" alt="" /></button>
+                    </div>
+                  </div>
+                </section>
+
+                <section class="second-cardsec">
+                  <div><img src="images/Oliver Sofa (72_ 1.svg" alt="" /></div>
+                  <div>
+                    <h3>2L Power Blender</h3>
+                    <div class="shape">
+                      <img src="images/Shape.svg" alt="" />
+                      <img src="images/Shape.svg" alt="" />
+                      <img src="images/Shape.svg" alt="" />
+                      <img src="images/Shape.svg" alt="" />
+                      <img src="images/Shape.svg" alt="" />
+                    </div>
+                    <h3>₦28,500</h3>
+                    <div class="card-button">
+                      <button type="button">Add To Cart</button>
+                      <button type="button" aria-label="Add to wishlist"><img src="images/Union.svg" alt="" /></button>
+                    </div>
+                  </div>
+                </section>
+
+                <section class="second-cardsec">
+                  <div><img src="images/Oliver Sofa (72_ 1.svg" alt="" /></div>
+                  <div>
+                    <h3>2L Power Blender</h3>
+                    <div class="shape">
+                      <img src="images/Shape.svg" alt="" />
+                      <img src="images/Shape.svg" alt="" />
+                      <img src="images/Shape.svg" alt="" />
+                      <img src="images/Shape.svg" alt="" />
+                      <img src="images/Shape.svg" alt="" />
+                    </div>
+                    <h3>₦28,500</h3>
+                    <div class="card-button">
+                      <button type="button">Add To Cart</button>
+                      <button type="button" aria-label="Add to wishlist"><img src="images/Union.svg" alt="" /></button>
+                    </div>
+                  </div>
+                </section>
+              </section>
+            </div>
+          </div>
+        </section>
+    </article>
+
+    <article class="third">
+      <section class="third1">
+        <h2>Need Help?</h2>
+        <div>
+          <div>
+            <h3>Customer Support</h3>
+            <p>Email: support@larryvarieties.com<br />Phone: +234 000 000 0000</p>
+          </div>
+          <div>
+            <h3>Delivery</h3>
+            <p>Standard: 2–4 days<br />Express: 24–48 hrs</p>
+          </div>
+          <div>
+            <h3>Returns</h3>
+            <p>7-day return window (unused items). <br />See policy.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="third2">
+        <div>
+          <h2>Today’s Offer</h2>
+          <span>Limited</span>
+        </div>
+        <p>Get <strong>10% off</strong> your first order when you subscribe.</p>
+        <div>
+          <input placeholder="Email address" />
+          <button type="button">Subscribe</button>
+        </div>
+      </section>
+    </article>
+  </main>
+
+  <!-- ✅ FOOTER is already semantic -->
+  <footer id="contact">
+    <div class="footer-grid">
+      <div>
+        <h3>Larry Varieties Stores</h3>
+        <p class="small" style="margin:0 0 10px;">
+          Kitchen essentials you can trust — blenders, <br /> cookware, utensils, and more.
+        </p>
+
+        <div class="trust-row">
+          <span class="badge">🚚 <strong>Fast Delivery</strong></span>
+          <span class="badge">🔒 <strong>Secure Payment</strong></span>
+          <span class="badge">✅ <strong>Quality Checked</strong></span>
+          <span class="badge">📞 <strong>Support</strong></span>
+        </div>
+      </div>
+
+      <div>
+        <h3>Shop</h3>
+        <a href="shop.html">All products</a>
+        <a href="shop.html#categories">Categories</a>
+        <a href="shop.html#deals">Deals</a>
+      </div>
+
+      <div>
+        <h3>Account</h3>
+        <a href="account.html">My account</a>
+        <a href="cart.html">Cart</a>
+        <a href="checkout.html">Checkout</a>
+      </div>
+
+      <div>
+        <h3>Sell</h3>
+        <a href="seller.html">Sell on Larry Varieties</a>
+        <a href="seller-dashboard.html">Seller dashboard</a>
+        <a href="add-product.html">Add product</a>
+      </div>
+    </div>
+
+    <hr />
+    <div class="small">© <span id="y"></span> Larry Varieties Stores. All rights reserved.</div>
+  </footer>
+
+  <script src="script.js"></script>
+
+
+  <script>
+    // Update year automatically
+    document.getElementById("y").textContent = new Date().getFullYear();
+
+    // =========================
+    // Dark mode toggle (manual)
+    // =========================
+    const body = document.body;
+    const btn = document.getElementById("themeToggle");
+
+    // Load saved theme if it exists
+    const savedTheme = localStorage.getItem("theme"); // "light" | "dark" | null
+    if (savedTheme) {
+      body.setAttribute("data-theme", savedTheme);
+      btn.setAttribute("aria-pressed", savedTheme === "dark" ? "true" : "false");
+    }
+
+    btn.addEventListener("click", () => {
+      const current = body.getAttribute("data-theme");
+      const next = current === "dark" ? "light" : "dark";
+
+      body.setAttribute("data-theme", next);
+      localStorage.setItem("theme", next);
+      btn.setAttribute("aria-pressed", next === "dark" ? "true" : "false");
+    });
+  </script>
+</body>
+</html>

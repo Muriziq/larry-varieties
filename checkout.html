@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+          <header class="site-header">
+    <div class="logo">LV</div>
+
+    <!-- Primary site navigation -->
+    <nav aria-label="Primary">
+      <a href="index.html">Home</a>
+      <a href="shop.html">Shop</a>
+      <a href="shop.html#categories">Categories</a>
+      <a href="seller.html">Sell</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <div class="icon-btn">
+      <!-- Account -->
+      <a title="Account" href="account.html">
+        <img src="images/Group 49.svg" alt="Account" />
+      </a>
+
+      <!-- Cart -->
+      <a title="Cart" href="cart.html">
+        <img src="images/Group.svg" alt="Cart" />
+        <span class="cart-count">2</span>
+      </a>
+
+      <!-- ✅ Dark mode toggle (manual) -->
+      <button class="theme-toggle" type="button" id="themeToggle" aria-pressed="false" title="Toggle dark mode">
+        🌓
+      </button>
+    </div>
+  </header>
+    <main class="checkout">
+  <div class="ch-container">
+    <div class="ch-section-title">
+      <h2>Checkout</h2>
+      <p>Fill delivery + payment details</p>
+    </div>
+
+    <div class="ch-two-col">
+      <!-- LEFT: Checkout form -->
+      <div class="ch-glass ch-soft ch-p-20">
+        <h3 class="ch-h3">Customer Information</h3>
+
+        <div class="ch-grid-2">
+          <div class="field">
+            <label>Full name</label>
+            <input class="ch-input" placeholder="Larry Ade" />
+          </div>
+          <div class="field">
+            <label>Phone</label>
+            <input class="ch-input" placeholder="+234..." />
+          </div>
+        <div class="field" style="grid-column: span 2;">
+          <label>Email</label>
+          <input class="ch-input" placeholder="you@email.com" />
+        </div>
+        </div>
+
+
+
+        <hr class="ch-hr" />
+
+        <h3 class="ch-h3">Delivery Address</h3>
+
+        <div class="ch-grid-2">
+          <div class="field">
+            <label>State</label>
+            <input class="ch-input" placeholder="Kwara" />
+          </div>
+          <div class="field">
+            <label>City</label>
+            <input class="ch-input" placeholder="Ilorin" />
+          </div>
+                  <div class="field">
+          <label>Address</label>
+          <input class="ch-input" placeholder="Street, area, house no..." />
+        </div>
+
+        <div class="field">
+          <label>Delivery note (optional)</label>
+          <textarea class="ch-textarea" placeholder="Call me when you arrive..."></textarea>
+        </div>
+        </div>
+
+
+
+        <hr class="ch-hr" />
+
+        <h3 class="ch-h3">Payment</h3>
+
+        <div class="ch-grid-2">
+          <div class="field">
+            <label>Payment method</label>
+            <select class="ch-input">
+              <option>Card</option>
+              <option>Bank transfer</option>
+              <option>Pay on delivery</option>
+            </select>
+          </div>
+          <div class="field">
+            <label>Delivery option</label>
+            <select class="ch-input">
+              <option>Standard (2–4 days)</option>
+              <option>Express (24–48 hrs)</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="ch-actions">
+          <button class="ch-btn ch-btn-primary" type="button">Place order</button>
+          <a class="ch-btn" href="cart.html">Back to cart</a>
+        </div>
+      </div>
+
+      <!-- RIGHT: Summary -->
+      <aside class="c-summary">
+        <h3 class="ch-summary-title">Order Summary</h3>
+
+        <div class="ch-small ch-summary-row"><span>Items</span><span>2</span></div>
+        <div class="ch-small ch-summary-row"><span>Subtotal</span><span>₦35,000</span></div>
+        <div class="ch-small ch-summary-row"><span>Delivery</span><span>₦1,500</span></div>
+
+        <hr class="ch-hr" />
+
+        <div class="ch-summary-total">
+          <span>Total</span><span>₦36,500</span>
+        </div>
+
+        <hr class="ch-hr" />
+
+        <p class="ch-small ch-policy">
+          By placing an order, you agree to our terms and refund policy.
+        </p>
+      </aside>
+    </div>
+  </div>
+    </main>
+              <div class="asmall">© <span id="y"></span> Larry Varieties Stores</div>
+
+</body>
+</html>

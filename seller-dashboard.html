@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+      <header class="site-header">
+    <div class="logo">LV</div>
+
+    <!-- Primary site navigation -->
+    <nav aria-label="Primary">
+      <a href="index.html">Home</a>
+      <a href="shop.html">Shop</a>
+      <a href="shop.html#categories">Categories</a>
+      <a href="seller.html">Sell</a>
+      <a href="#contact">Contact</a>
+    </nav>
+      <div class="nav-actions">
+        <a class="ch-btn" href="add-product.html">Add product</a>
+        <a class="ch-btn-primary ch-btn" href="shop.html">View store</a>
+      </div>
+  </header>
+  <main class="account">
+    <article class="account-grid">
+      <section class="account-sidebar" aria-label="Account menu">
+        <h3 class="sidebar-title">Seller Menu</h3>
+
+        <nav class="sidebar-links" aria-label="Account links">
+        <a href="seller-dashboard.html">Overview <span>›</span></a>
+        <a href="add-product.html">Add Product <span>›</span></a>
+        <a href="#">Manage Products <span>›</span></a>
+        <a href="#">Orders <span>›</span></a>
+        <a href="#">Payouts <span>›</span></a>
+        <a href="#">Reviews <span>›</span></a>
+        <a href="seller.html">Logout <span>›</span></a>
+        </nav>
+      </section>
+      <section class="sd-sec">
+          <h2>Overview</h2>
+        <div >
+          <div class="sd-overdiv">
+            <div >Total Sales</div>
+            <p>₦420,000</p>
+            <div >This month</div>
+          </div>
+          <div class="sd-overdiv">
+            <div >Orders</div>
+            <p>38</p>
+            <div >Pending: 7</div>
+          </div>
+          <div class="sd-overdiv">
+            <div >Products</div>
+            <p>24</p>
+            <div >Active</div>
+          </div>
+          <div class="sd-overdiv">
+            <div >Rating</div>
+            <p>4.7</p>
+            <div >Avg reviews</div>
+          </div>
+        </div>
+      </section>
+    </article>
+        <section class="orders" aria-label="Recent orders">
+        <h3>Recent Orders</h3>
+
+      <!-- ✅ overflow-x auto wrapper -->
+      <div class="table-wrap">
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Items</th>
+              <th>CustomerId</th>
+              <th>Order</th>
+              <th>Date</th>
+              <th>Total</th>
+              <th>Status</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <tr>
+              <td>
+                <div class="order-product">
+                  <img
+                    alt="2L Power Blender"
+                    src="images/Oliver Sofa (72_ 1.svg"
+                  />
+                  <div>
+                    <div class="name">2L Power Blender</div>
+                    <div class="sub">Qty: 1 • Color: Black</div>
+                  </div>
+                </div>
+              </td>
+              <td>#CS-001</td>
+              <td>#LV-1029</td>
+              <td>Feb 21, 2026</td>
+              <td>₦36,500</td>
+              <td><span class="status warn">Processing</span></td>
+              <td>
+                <div class="actions">
+                  <a class="btn1" href="#">View</a>
+                  <a class="btn2" href="#">Track</a>
+                </div>
+              </td>
+            </tr>
+
+            <tr>
+              <td>
+                <div class="order-product">
+                  <img
+                    alt="Utensil Set"
+                    src="images/Oliver Sofa (72_ 1.svg"
+                  />
+                  <div>
+                    <div class="name">Utensil Set (12 pcs)</div>
+                    <div class="sub">Qty: 1 • Material: Silicone</div>
+                  </div>
+                </div>
+              </td>
+              <td>#CS-002</td>
+              <td>#LV-1021</td>
+              <td>Feb 10, 2026</td>
+              <td>₦9,800</td>
+              <td><span class="status ok">Shipped</span></td>
+              <td>
+                <div class="actions">
+                  <a class="btn1" href="#">View</a>
+                  <a class="btn2" href="#">Reorder</a>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <div class="order-product">
+                  <img
+                    alt="Utensil Set"
+                    src="images/Oliver Sofa (72_ 1.svg"
+                  />
+                  <div>
+                    <div class="name">Utensil Set (12 pcs)</div>
+                    <div class="sub">Qty: 1 • Material: Silicone</div>
+                  </div>
+                </div>
+              </td>
+              <td>#CS-002</td>
+              <td>#LV-1021</td>
+              <td>Feb 10, 2026</td>
+              <td>₦9,800</td>
+              <td><span class="status cancel">Canceled</span></td>
+              <td>
+                <div class="actions">
+                  <a class="btn1" href="#">View</a>
+                  <a class="btn2" href="#">Reorder</a>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+        <div class="asmall">© <span id="y"></span> Larry Varieties Stores</div>
+
+</body>
+</html>
