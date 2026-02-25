@@ -251,27 +251,27 @@ header, main, footer{
   gap: 1rem;
   align-self: flex-end;
   padding-bottom: 1rem;
-  width: 25vw;
+  width: 30vw;
 
-  
 }
-.firstnav > div{
+.firstnav > div,.shop1,.shop21{
   background-color: var(--chip);
   display: flex;
   flex-direction: row;
   gap: 1rem;
   height: 50px;
   padding: 0.7rem 1rem;
-  border-radius: 0.5rem;
+  border-radius: 0.7rem;
   align-items: center;
   width: 100%;
-  border: 2px solid var(--border)
+  border: 2px solid var(--border);
+  position: relative;
 }
-.firstnav img{
+.firstnav img,.shop1 img{
   height: 80%;
   width: auto;
 }
-.firstnav input{
+.firstnav input,.shop1 input,.shop21 input,.shop21 select{
   border: none;
   border-left:  1px solid #ECFFEB;
   background-color: transparent;
@@ -299,9 +299,11 @@ header, main, footer{
   top: 0;
   z-index: -1;
 }
-
-.first2 h1{
+h1{
   font-family: "Archivo", sans-serif;
+}
+.first2 h1{
+
   font-size: 3rem;
   font-weight: 500;
 }
@@ -494,6 +496,8 @@ header, main, footer{
 }
 
 .second-cardsec{
+  min-width: 300px;
+  max-width: 300px;
   width: 300px;
   padding: 1rem;
   border: 2px solid var(--border);
@@ -896,7 +900,7 @@ padding:1rem 1rem;
   outline: none;
   border: none;
   color: var(--text-invert);
-
+  border: 2px solid var(--border);
   width: 100%;
 }
 
@@ -1408,4 +1412,208 @@ border-radius: 1rem;
   display: flex;
   flex-direction: row;
   gap: 1rem;
+}
+.shop{
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.shopsec1{
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+    color: var(--text-invert);
+  border: 2px solid var(--border);
+  border-radius: 0.5rem;
+  background: var(--glass);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  padding: 2rem;
+  border-radius: 1.5rem;
+}
+.shop2{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  
+}
+
+.shop1{
+  width: 40vw;
+}
+.shop .shop21{
+   width: auto;
+}
+.shopen{
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.shop .shop21 input{
+  width: 10vw;
+
+}
+.shop .shop21 select{
+  width: auto;
+  flex: 1;
+}
+.shopsec2{
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.shopsec2 > div{
+  display: flex;
+  flex-direction: row;
+  gap: 1.5rem;
+  overflow-x: auto ;
+  padding-bottom: 1rem;
+}
+
+/* Login Page */
+.loginmain{
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.login{
+  height: 80vh;
+  width: 80vw;
+
+overflow: hidden;
+padding: 1rem;
+border-radius: 1.5rem;
+  border: 3px solid var(--border);
+
+}
+.login > div{
+    background: var(--glass);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+    display: flex;
+  flex-direction: row;
+  height: 100%;
+  padding: 1.5rem;
+  border-radius: 1.5rem;
+  gap: 2rem;
+}
+.log2{
+  width: 35vw;
+  overflow: hidden;
+  position: relative;
+  border-radius: 1.5rem;
+
+}
+.log2::before{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  content: "";
+  opacity: 0.4;
+  background-color: #0d0d0d;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+.log2 > div{
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 1rem;
+  margin-left: 2rem;
+  padding-top: 4rem
+}
+.log2 h1{
+  font-size: 3rem;
+}
+.log2 > img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -2;
+}
+
+.log{
+  flex: 1;
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.log form{
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.log a{
+  align-self: flex-end;
+   color: #030363;
+  text-decoration: none;
+  font-size: 1.2rem;
+
+}
+.log > button{
+  width: 70%;
+  align-self: center;
+  padding: 1rem;
+  border: none;
+  background-color: #030363;
+  color: var(--text-invert);
+  font-size: 1rem;
+  border-radius: 2rem;
+}
+.signhr{
+  width: 75%;
+  align-self: center;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1rem;
+}
+.signhr div{
+  flex: 1;
+  height: 1.5px;
+  background-color: #ECFFEB;
+}
+
+.signbut{
+  display: flex;
+  flex-direction: row;
+  align-self: center;
+  gap: 1rem;
+}
+.signbut button{
+  height: 47px;
+  width: 50px;
+  border: none;
+   background: var(--glass);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-radius: 0.3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.signbut img{
+  width: 60%;
+  height: 60%;
+  object-fit: contain;
+}
+
+.loglast{
+  display: flex;
+  flex-direction: row;
+  align-self: center;
+  gap:0.5rem;
+  align-items: center;
 }
