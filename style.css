@@ -37,8 +37,8 @@
   --chip: rgba(0,0,0,0.12);
 
   --shadow: 0 8px 32px rgba(0,0,0,0.25);
-  --radius-xl: 2rem;
-  --radius-lg: 1.5rem;
+  --radius-xl: 1.8rem;
+  --radius-lg: 1.35rem;
 }
 
 /* System dark mode (only if user hasn't chosen manually) */
@@ -85,6 +85,7 @@ body[data-theme="dark"]{
   padding: 0;
   box-sizing: border-box;
   font-family: "Roboto", sans-serif;
+  font-size: 1rem;
 }
 
 /* -------------------------
@@ -128,14 +129,14 @@ header, main, footer{
   justify-content: space-between;
   align-items: center;
 
-  margin: 1rem;
-  padding: 1rem 2rem;
+  margin: 0.9rem;
+  padding: 0.9rem 1.8rem;
   border-radius: var(--radius-lg);
 
   background: var(--glass);
   border: 2px solid var(--border);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
   box-shadow: var(--shadow);
   color: var(--text-invert);
 }
@@ -143,7 +144,7 @@ header, main, footer{
 .site-header nav{
   display: flex;
   flex-direction: row;
-  gap: 2.5rem;
+  gap: 2.25rem;
 }
 
 .site-header a{
@@ -153,14 +154,14 @@ header, main, footer{
 
 /* Logo stays same design */
 .logo{
-  padding: 0.5rem 1rem;
+  padding: 0.45rem 0.9rem;
   color: var(--text-invert);
   border: 2px solid var(--border);
-  border-radius: 0.5rem;
+  border-radius: 0.45rem;
   background: var(--glass);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  font-size: 1.5rem;
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  font-size: 1.35rem;
   font-family: "FC Barcelona", sans-serif;
   font-weight: 700;
 }
@@ -169,14 +170,14 @@ header, main, footer{
 .icon-btn{
   display: flex;
   flex-direction: row;
-  gap: 0.5rem;
+  gap: 0.45rem;
   height: auto;
 }
 
 /* Icon link buttons */
 .icon-btn a{
-  height: 45px;
-  width: 45px;
+  height: 40.5px;
+  width: 40.5px;
   border: 2px solid var(--border);
   border-radius: 50%;
   display: flex;
@@ -197,22 +198,22 @@ header, main, footer{
   right: -10px;
   top: -5px;
   background: rgba(155, 138, 138, 0.7);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  height: 20px;
-  width: 20px;
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  height: 18px;
+  width: 18px;
   display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 50%;
-  font-size: 0.7rem;
+  font-size: 0.63rem;
   color: var(--text-invert);
 }
 
 /* Theme toggle button */
 .theme-toggle{
-  height: 45px;
-  width: 45px;
+  height: 40.5px;
+  width: 40.5px;
   border-radius: 50%;
   border: 2px solid var(--border);
   background: var(--glass);
@@ -224,7 +225,7 @@ header, main, footer{
    Sections layout
 -------------------------- */
 .first,.second{
-  padding: 1rem;
+  padding: 0.9rem;
   position: relative;
 }
 
@@ -232,11 +233,11 @@ header, main, footer{
   border: 2px solid var(--border);
   border-radius: var(--radius-xl);
   background: var(--glass);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
   color: var(--text-invert);
   box-shadow: var(--shadow);
-  padding: 2rem;
+  padding: 1.8rem;
   display: flex;
   flex-direction: column;
   position: relative;
@@ -248,36 +249,68 @@ header, main, footer{
 .firstnav{
   display: flex;
   flex-direction: row;
-  gap: 1rem;
+  gap: 0.9rem;
   align-self: flex-end;
-  padding-bottom: 1rem;
-  width: 30vw;
 
 }
-.firstnav > div,.shop1,.shop21{
+.firstnav a{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+            background-color: #ecffeb23;
+              height: 50px;
+}
+.firstnav > a{
+
+  width: 50px;
+
+      border-radius: 50%;
+
+}
+
+.firstnav img{
+  width: 40%;
+  height: 40%;
+  object-fit: contain;
+}
+.firstnav2{
+    display: flex;
+    flex-direction: row;
+    gap: 0.9rem;
+    align-self: flex-end;
+    padding-bottom: 0.9rem;
+
+}
+.firstnav2 a{
+    color: #ECFFEB;
+    padding: 0.63rem 1.35rem;
+    text-decoration: none;
+    border-radius: 1.8rem;
+}
+.shop1,.shop21{
   background-color: var(--chip);
   display: flex;
   flex-direction: row;
-  gap: 1rem;
+  gap: 0.9rem;
   height: 50px;
-  padding: 0.7rem 1rem;
-  border-radius: 0.7rem;
+  padding: 0.63rem 0.9rem;
+  border-radius: 0.63rem;
   align-items: center;
   width: 100%;
   border: 2px solid var(--border);
   position: relative;
 }
-.firstnav img,.shop1 img{
+.shop1 img{
   height: 80%;
   width: auto;
 }
-.firstnav input,.shop1 input,.shop21 input,.shop21 select{
+.shop1 input,.shop21 input,.shop21 select{
   border: none;
   border-left:  1px solid #ECFFEB;
   background-color: transparent;
   outline: none;
   color: #ECFFEB;
-  padding: 0.5rem;
+  padding: 0.45rem;
   width: 100%;
 }
 
@@ -285,11 +318,11 @@ header, main, footer{
    Hero
 -------------------------- */
 .first2{
-  padding: 3rem 2rem 7rem;
+  padding: 3rem 1.8rem 7rem;
   position: relative;
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 0.9rem;
   align-items: start;
 }
 
@@ -311,12 +344,12 @@ h1{
 .first21{
   display: flex;
   flex-direction: row;
-  gap: 1.5rem;
+  gap: 1.35rem;
 }
 
 .first21 button{
-  padding: 0.7rem 2rem;
-  border-radius: 0.5rem;
+  padding: 0.63rem 1.8rem;
+  border-radius: 0.45rem;
   border: none;
   font-size: 0.9rem;
   font-weight: 500;
@@ -338,8 +371,8 @@ h1{
    Featured product cards row
 -------------------------- */
 .first3{
-  margin-top: 1rem;
-  padding: 1.5rem;
+  margin-top: 0.9rem;
+  padding: 1.35rem;
   border-radius: var(--radius-xl);
   display: flex;
   flex-direction: row;
@@ -362,7 +395,7 @@ h1{
 }
 
 .first3 > div > div:first-of-type{
-  width: 20vw;
+  width: 18vw;
   overflow: hidden;
   border-radius: var(--radius-xl);
   height: 100%;
@@ -380,11 +413,11 @@ h1{
 .first3 > div > div:last-of-type{
   display: none;
   flex-direction: column;
-  width: 20vw;
+  width: 18vw;
   background-color: rgba(255, 177, 153, 0.06);
-  padding: 2rem 1rem;
+  padding: 1.8rem 0.9rem;
   font-size: 0.9rem;
-  gap: 1rem;
+  gap: 0.9rem;
   border-radius: 0 var(--radius-xl) var(--radius-xl) 0;
 }
 
@@ -394,22 +427,22 @@ h1{
 
 .first3 > div > h3{
   position: absolute;
-  bottom: 1rem;
-  right: 1rem;
+  bottom: 0.9rem;
+  right: 0.9rem;
 }
 
 /* -------------------------
    Second section
 -------------------------- */
 .second2,.second3{
-  margin: 2rem;
+  margin: 1.8rem;
 }
 
 .second2{
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 1.5rem;
+  gap: 1.35rem;
   position: relative;
 }
 
@@ -430,18 +463,18 @@ h1{
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   place-content: center;
-  gap: 1.5rem;
+  gap: 1.35rem;
   width: 100%;
 }
 
 .glass-category-card{
   display: flex;
   flex-direction: row;
-  gap: 1.5rem;
+  gap: 1.35rem;
   text-decoration: none;
   background-color: var(--glass);
-  padding: 1rem;
-  border-radius: 1rem;
+  padding: 0.9rem;
+  border-radius: 0.9rem;
   color: var(--text-invert);
 }
 
@@ -449,12 +482,12 @@ h1{
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 0.5rem;
+  gap: 0.45rem;
 }
 
 .thumb{
-  height: 100px;
-  width: 100px;
+  height: 90px;
+  width: 90px;
   overflow: hidden;
   border-radius: 50%;
 }
@@ -463,14 +496,14 @@ h1{
 .second3{
   position: relative;
   color: var(--text-invert);
-  margin: 2rem 0;
+  margin: 1.8rem 0;
   display: flex;
   flex-direction: column;
 }
 
 .second3 h2{
-  font-size: 2rem;
-  padding: 2rem 100px;
+  font-size: 1.8rem;
+  padding: 1.8rem 90px;
 }
 
 .second3 > canvas{
@@ -482,7 +515,7 @@ h1{
 }
 
 .second3 > div > div{
-  padding-left: 100px;
+  padding-left: 90px;
   height: auto;
 }
 
@@ -490,26 +523,26 @@ h1{
   width: 100%;
   display: flex;
   flex-direction: row;
-  gap: 1.5rem;
+  gap: 1.35rem;
   overflow-x: auto;
-  padding: 1rem;
+  padding: 0.9rem;
 }
 
 .second-cardsec{
-  min-width: 300px;
-  max-width: 300px;
-  width: 300px;
-  padding: 1rem;
+  min-width: 270px;
+  max-width: 270px;
+  width: 270px;
+  padding: 0.9rem;
   border: 2px solid var(--border);
   border-radius: var(--radius-xl);
   background: var(--glass);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
   color: var(--text-invert);
 }
 
 .second-cardsec > div:first-of-type{
-  height: 200px;
+  height: 180px;
   border-radius: var(--radius-lg);
   overflow: hidden;
 }
@@ -523,24 +556,24 @@ h1{
 .second-cardsec > div:last-of-type{
   display: flex;
   flex-direction: column;
-  gap: 0.7rem;
-  padding-top: 1rem;
+  gap: 0.63rem;
+  padding-top: 0.9rem;
 }
 
 .shape{
   display: flex;
   flex-direction: row;
-  gap: 0.5rem;
+  gap: 0.45rem;
 }
 
 .shape img{
-  height: 20px;
-  width: 20px;
+  height: 18px;
+  width: 18px;
 }
 
 .second-cardsec h3{
   font-family:"Archivo", sans-serif;
-  font-size: 1.5rem;
+  font-size: 1.35rem;
   font-weight: 500;
 }
 
@@ -551,15 +584,15 @@ h1{
 .card-button{
   display: grid;
   grid-template-columns: 1fr 50px;
-  gap: 1.5rem;
-  padding-right: 1rem;
+  gap: 1.35rem;
+  padding-right: 0.9rem;
 }
 
 .card-button button{
   height: 50px;
   background: var(--glass);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
   border: 2px solid var(--text-invert);
   color: var(--text-invert);
   border-radius: var(--radius-lg);
@@ -573,8 +606,8 @@ h1{
 }
 
 .card-button img{
-  width: 25px;
-  height: 25px;
+  width: 22.5px;
+  height: 22.5px;
 }
 
 /* -------------------------
@@ -583,8 +616,8 @@ h1{
 .third{
   color: var(--text-invert);
   box-shadow: var(--shadow);
-  margin: 2rem 1rem;
-  padding: 2rem;
+  margin: 1.8rem 0.9rem;
+  padding: 1.8rem;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -595,39 +628,39 @@ h1{
   border: 2px solid var(--border);
   border-radius: var(--radius-xl);
   background: var(--glass);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  padding: 2rem;
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  padding: 1.8rem;
 }
 
 .third1> div{
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 1.5rem;
-  width: 50vw;
+  gap: 1.35rem;
+  width: 45vw;
 }
 
 .third1 h2{
-  margin-bottom: 1rem;
+  margin-bottom: 0.9rem;
 }
 
 .third1 > div > div{
   background-color: var(--glass);
-  padding: 1rem 2rem;
-  border-radius: 1rem;
+  padding: 0.9rem 1.8rem;
+  border-radius: 0.9rem;
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  gap: 0.45rem;
   flex: 1;
   font-size: 0.9rem;
   text-wrap: nowrap;
-  line-height: 1.5rem;
+  line-height: 1.35rem;
 }
 
 .third2{
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  gap: 0.45rem;
 }
 
 .third2 > div{
@@ -635,22 +668,23 @@ h1{
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  gap: 1.5rem;
+  gap: 1.35rem;
 }
 
 .third2 span{
   background-color: var(--chip);
-  padding: 0.5rem 1rem;
-  border-radius: 2rem;
+  padding: 0.45rem 0.9rem;
+  border-radius: 1.8rem;
   font-size: 0.8rem;
 }
 
 .third2 input,.field input{
   background-color: var(--chip);
-  border-radius: 0.5rem;
-  padding: 1rem;
+  border-radius: 0.45rem;
+
+  padding: 0.9rem;
   outline: none;
-  border: none;
+    border: 2px solid var(--border);
   color: var(--text-invert);
   flex: 1;
 
@@ -660,22 +694,22 @@ h1{
 .third2 button{
   background-color: var(--btn-bg);
   color: var(--btn-text);
-  padding: 0.9rem 1.5rem;
+  padding: 0.9rem 1.35rem;
   border: none;
-  border-radius: 0.5rem;
+  border-radius: 0.45rem;
 }
 
 /* -------------------------
    Footer
 -------------------------- */
 footer{
-  margin: 0 2rem;
+  margin: 0 1.8rem;
   border: 2px solid var(--border);
   border-radius: var(--radius-xl);
   background: var(--glass);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  padding: 2rem;
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  padding: 1.8rem;
   color: var(--text-invert);
 }
 
@@ -683,28 +717,28 @@ footer{
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  padding-bottom: 1rem;
+  padding-bottom: 0.9rem;
 }
 
 .footer-grid > div{
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  gap: 0.45rem;
 }
 
 .footer-grid > div > div{
   display: flex;
   flex-direction: row;
-  gap: 0.5rem;
+  gap: 0.45rem;
   flex-wrap: wrap;
 }
 
 .badge{
   border: 2px solid var(--border);
-  border-radius: 2rem;
+  border-radius: 1.8rem;
   background: var(--glass);
   color: var(--text-invert);
-  padding: 0.5rem 1rem;
+  padding: 0.45rem 0.9rem;
 }
 
 .footer-grid h3{
@@ -717,62 +751,62 @@ footer{
 }
 
 .small{
-  margin-top: 1rem;
+  margin-top: 0.9rem;
 }
 
 .account-grid{
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  padding: 1rem;
+  padding: 0.9rem;
 }
 .account-grid > section,.orders{
   display: flex;
   flex-direction: column;
-  gap: 0.7rem;
+  gap: 0.63rem;
   border-radius: var(--radius-lg);
-  padding: 2rem;
+  padding: 1.8rem;
   background: var(--glass);
   border: 2px solid var(--border);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
   box-shadow: var(--shadow);
   color: var(--text-invert);
 }
 .sidebar-links{
   display: flex;
   flex-direction: column;
-  gap: 0.7rem;
-  width: 20vw;
+  gap: 0.63rem;
+  width: 18vw;
 }
 .sidebar-links a{
 display: flex;
 flex-direction: row;
 justify-content: space-between;
 text-decoration: none;
-padding:1rem 1rem;
+padding:0.9rem 0.9rem;
   background-color: var(--glass);
     color: var(--text-invert);
-    border-radius: 0.5rem;
+    border-radius: 0.45rem;
 }
 .account-profile{
-  width: 50vw;
+  width: 45vw;
 }
 .form-grid{
   display: grid;
   grid-template-columns: 1fr 1fr;
-  column-gap: 2rem;
-  row-gap: 1rem;
+  column-gap: 1.8rem;
+  row-gap: 0.9rem;
 }
 .field,.pfield,.pgrid > div{
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  gap: 0.45rem;
 }
 .pw-toggle{
   position: absolute;
   top: 50%;
-  right: 1rem;
+  right: 0.9rem;
   transform: translateY(-50%);
   background-color: transparent;
   border: none;
@@ -786,21 +820,21 @@ padding:1rem 1rem;
 .profile-form{
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 1.8rem;
 }
 
 .form-actions button{
-  padding: 0.7rem 1.5rem;
-  border-radius: 0.5rem;
+  padding: 0.63rem 1.35rem;
+  border-radius: 0.45rem;
   font-size: 0.9rem;
   font-weight: 500;
-  margin-right: 0.7rem;
+  margin-right: 0.63rem;
 }
 .acccount h3{
   font-size: 1.3rem;
 }
 .orders{
-  margin: 1rem;
+  margin: 0.9rem;
 }
 .table-wrap{
   overflow-x: auto;
@@ -815,7 +849,7 @@ padding:1rem 1rem;
 .table th,
 .table td{
   text-align: left;
-  padding: 1rem;
+  padding: 0.9rem;
   border-bottom: 1px solid var(--chip);;
   vertical-align: middle;
 }
@@ -828,7 +862,7 @@ padding:1rem 1rem;
 .order-product{
   display: flex;
   flex-direction: row;
-  gap: 0.7rem;
+  gap: 0.63rem;
 }
 .order-product img{
   height: 70px;
@@ -836,17 +870,17 @@ padding:1rem 1rem;
   object-fit: cover;
 }
 .order-product > div{
-  padding-top: 0.5rem;
+  padding-top: 0.45rem;
 }
 .actions{
   display: flex;
   flex-direction: row;
-  gap: 0.5rem;
+  gap: 0.45rem;
 
 }
 
 .actions a{
-    padding: 0.7rem 1.2rem;
+    padding: 0.63rem 1.2rem;
     font-size: 0.9rem;
     text-decoration: none;
     border-radius: 0.2rem;
@@ -854,18 +888,18 @@ padding:1rem 1rem;
 }
 .asmall{
     border-radius: var(--radius-lg);
-  padding: 2rem;
+  padding: 1.8rem;
   background: var(--glass);
   border: 2px solid var(--border);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
   box-shadow: var(--shadow);
   color: var(--text-invert);
-  margin: 1rem;
+  margin: 0.9rem;
 }
 .status{
-  padding: 0.5rem 1.5rem;
-  border-radius: 2rem;
+  padding: 0.45rem 1.35rem;
+  border-radius: 1.8rem;
 }
 .status.ok{
   background: rgba(0, 255, 148, 0.10);
@@ -881,53 +915,106 @@ padding:1rem 1rem;
 /* add-product html */
 
 .add-product{
-  padding: 1rem;
+  padding: 0.9rem;
 }
 
 .back{
       background-color: var(--chip);
-  border-radius: 0.5rem;
-  padding: 1rem;
+  border-radius: 0.45rem;
+  padding: 0.9rem;
   outline: none;
   border: none;
   color: var(--text-invert);
-  margin-right: 0.5rem;
+  margin-right: 0.45rem;
 }
 .pfield input,.pfield select,.pfield textarea,.ch-input,.ch-textarea,.pgrid select,.pgrid input{
     background-color: var(--chip);
-  border-radius: 0.5rem;
-  padding: 1rem;
+  border-radius: 0.45rem;
+  padding: 0.9rem;
   outline: none;
   border: none;
   color: var(--text-invert);
   border: 2px solid var(--border);
   width: 100%;
 }
+.pfield.last .file{
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+}
+.pfield.last .file input{
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  color: transparent;
+  border: none;
+
+}
+.pfield.last .file > div:first-child img{
+  height: 40%;
+  width: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+.pfield.last .file > div:last-child{
+  height: 70px;
+  overflow: hidden;
+  overflow-x: auto;
+  max-width: 70vw;
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+}
+.pfield.last .file > div:last-child > div{
+  width: 110px;
+  overflow: hidden;
+}
+.pfield.last .file > div:last-child  img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.pfield.last .file > div:first-child{
+  background-color: var(--chip);
+  color: var(--text-invert);
+  border: 2px solid var(--border);
+  width: 40vw;
+  height: 25vw;
+  border-radius: 1rem;
+  overflow: hidden;
+  position: relative;
+}
+.pfield.last .file input::file-selector-button{
+  display: none;
+}
 
 .pform{
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  gap: 1.35rem;
     border-radius: var(--radius-lg);
-  padding: 2rem;
+  padding: 1.8rem;
   background: var(--glass);
   border: 2px solid var(--border);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
   box-shadow: var(--shadow);
   color: var(--text-invert);
 }
 .pform > section{
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  column-gap: 2rem;
-  row-gap: 1.5rem;
+  column-gap: 1.8rem;
+  row-gap: 1.35rem;
 }
 .pfield.last{
   grid-column: span 3;
 }
 .pfield textarea{
-  height: 300px;
+  height: 270px;
 }
 
 
@@ -937,17 +1024,17 @@ padding:1rem 1rem;
    ========================= */
 
 .cmain{
-  padding: 1rem;
+  padding: 0.9rem;
 }
 .c-container,.c-summary,.ch-container{
   border: 2px solid var(--border);
   border-radius: var(--radius-xl);
   background: var(--glass);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
   color: var(--text-invert);
   box-shadow: var(--shadow);
-  padding: 2rem;
+  padding: 1.8rem;
 }
 
 
@@ -956,7 +1043,7 @@ padding:1rem 1rem;
   display:flex;
   align-items:end;
   justify-content:space-between;
-  gap: 1rem;
+  gap: 0.9rem;
   margin-bottom: 1.2rem;
 }
 .c-section-title h2{
@@ -976,10 +1063,10 @@ padding:1rem 1rem;
 }
 .c-cart-item{
   display:flex;
-  gap: 1rem;
+  gap: 0.9rem;
   align-items:center;
-  padding: 1rem;
-  border-radius: 1.5rem;
+  padding: 0.9rem;
+  border-radius: 1.35rem;
   border: 2px solid var(--border);
   background: rgba(255,255,255,0.06);
 }
@@ -1003,8 +1090,8 @@ padding:1rem 1rem;
   gap: 8px;
 }
 .c-qty button{
-  width: 36px;
-  height: 36px;
+  width: 32.4px;
+  height: 32.4px;
   border-radius: 12px;
   border: none;
   background: var(--chip);
@@ -1113,7 +1200,7 @@ padding:1rem 1rem;
    ========================= */
 
 .checkout{
-  padding: 1rem;
+  padding: 0.9rem;
 }
 
 .ch-section-title{
@@ -1140,14 +1227,14 @@ padding:1rem 1rem;
   background: var(--glass-2);
 }
 
-.ch-p-20{ padding: 20px; }
+.ch-p-20{ padding: 18px; }
 .ch-p-24{ padding: 24px; }
 
 /* Layout */
 .ch-two-col{
   display:grid;
   grid-template-columns: 1.2fr .8fr;
-  gap: 2rem;
+  gap: 1.8rem;
   align-items:start;
 }
 @media (max-width: 980px){
@@ -1163,9 +1250,9 @@ padding:1rem 1rem;
 .ch-grid-2{
   display:grid;
   grid-template-columns: 1fr 1fr;
-  gap: 1rem;
+  gap: 0.9rem;
 }
-@media (max-width: 620px){
+@media (max-width: 618px){
   .ch-grid-2{ grid-template-columns: 1fr; }
 }
 
@@ -1254,7 +1341,7 @@ padding:1rem 1rem;
   display: flex;
   flex-direction: row;
   gap: 3rem;
-  padding: 1rem;
+  padding: 0.9rem;
   align-items: start;
 }
 .products1 canvas{
@@ -1272,13 +1359,13 @@ padding:1rem 1rem;
   max-width: 45vw;
   position: relative;
   overflow: hidden;
-  padding: 2rem;
+  padding: 1.8rem;
   padding-bottom: 10px;
   display: flex;
   flex-direction: column;
   height: auto;
 
-gap: 1rem;}
+gap: 0.9rem;}
 .products1 img{
   height: 100%;
   width: 100%;
@@ -1288,97 +1375,97 @@ gap: 1rem;}
   width: 100%;
   height: 30vw;
   overflow: hidden;
-  padding-bottom: 20px;
+  padding-bottom: 18px;
 
 }
 .products1 > div:first-of-type img{
-  border-radius: 1rem;
+  border-radius: 0.9rem;
 }
 .products1 > div:last-of-type{
   display: flex;
   flex-direction: row;
-  gap: 0.7rem;
+  gap: 0.63rem;
   overflow-x: auto;
   overflow-y: hidden;
   padding-left: 50px;
-  margin-left: 20px;
+  margin-left: 18px;
 }
 
 .products1 > div:last-of-type div{
-  width: 10vw;
+  width: 9vw;
   height: 6vw;
   overflow: hidden;
-  border-radius: 0.5rem;
+  border-radius: 0.45rem;
 }
 .products2{
   display: flex;
   flex-direction: column;
   align-items: start;
-  padding-top: 1.5rem;
+  padding-top: 1.35rem;
   width: 100%;
 }
 .products2 h2{
 font-size: 2.5rem;
 font-family: "Archivo", sans-serif;
-margin-top: 1.5rem;
-margin-bottom: 0.7rem;
+margin-top: 1.35rem;
+margin-bottom: 0.63rem;
 }
 .products2 >p{
-  font-size: 1.1rem;
+  font-size: 1.0.9rem;
   font-weight: 400;
-  margin-bottom: 0.7rem;
+  margin-bottom: 0.63rem;
 }
 .prrating{
   display: flex;
   flex-direction: row;
-  gap: 0.7rem;
+  gap: 0.63rem;
   font-size: 1.2rem;
 }
 .pgrid{
   width: 100%;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  gap: 2rem;
+  gap: 1.8rem;
     background: var(--glass);
   border: 2px solid var(--border);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
   box-shadow: var(--shadow);
   color: var(--text-invert);
-  padding: 1rem;
-  border-radius: 0.7rem;
-  margin: 1rem 0;
+  padding: 0.9rem;
+  border-radius: 0.63rem;
+  margin: 0.9rem 0;
 }
 .prbttn{
   display: flex;
   flex-direction: row;
-  gap: 1rem;
+  gap: 0.9rem;
 }
 .prbttn .ch-btn{
-  padding: 0.7rem 1.5rem;
+  padding: 0.63rem 1.35rem;
   font-weight: 400;
 }
 .tabs{
   display: flex;
   flex-direction: row;
-  gap: 0.5rem;
+  gap: 0.45rem;
 }
 .tab{
-  padding: 0.7rem 1.5rem;
+  padding: 0.63rem 1.35rem;
   background-color: var(--chip);
-  border-radius: 1.5rem;
-  margin-top: 1rem;
-  margin-bottom: 0.7rem;
+  border-radius: 1.35rem;
+  margin-top: 0.9rem;
+  margin-bottom: 0.63rem;
 }
 .textarea{
       background: var(--glass);
   border: 2px solid var(--border);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
   box-shadow: var(--shadow);
   color: var(--text-invert);
-  padding: 2rem;
-  border-radius: 1rem;
+  padding: 1.8rem;
+  border-radius: 0.9rem;
   width: 100%;
   height: 250px;
 }
@@ -1387,51 +1474,51 @@ margin-bottom: 0.7rem;
 }
  /* Seller Dashboard */
  .sd-sec{
-  width: 50vw;
+  width: 45vw;
 align-self: flex-start;
  }
  .sd-sec > div{
 display: grid;
 grid-template-columns: 1fr 1fr ;
-gap: 1.5rem;
+gap: 1.35rem;
 
  }
 .sd-overdiv{
   display: flex;
   flex-direction: column;
   gap: 0.35rem;
-  padding: 1rem 1.5rem;
+  padding: 0.9rem 1.35rem;
 background-color: var(--chip);
-border-radius: 1rem;
+border-radius: 0.9rem;
 }
 .sd-overdiv > p{
-  font-size: 1.5rem;
+  font-size: 1.35rem;
   font-weight: 600;
 }
 .nav-actions{
   display: flex;
   flex-direction: row;
-  gap: 1rem;
+  gap: 0.9rem;
 }
 .shop{
-  padding: 1rem;
+  padding: 0.9rem;
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  gap: 1.35rem;
 }
 .shopsec1{
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 0.9rem;
   align-items: center;
     color: var(--text-invert);
   border: 2px solid var(--border);
-  border-radius: 0.5rem;
+  border-radius: 0.45rem;
   background: var(--glass);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  padding: 2rem;
-  border-radius: 1.5rem;
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  padding: 1.8rem;
+  border-radius: 1.35rem;
 }
 .shop2{
   display: flex;
@@ -1443,7 +1530,7 @@ border-radius: 1rem;
 }
 
 .shop1{
-  width: 40vw;
+  width: 36vw;
 }
 .shop .shop21{
    width: auto;
@@ -1451,10 +1538,10 @@ border-radius: 1rem;
 .shopen{
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  gap: 0.45rem;
 }
 .shop .shop21 input{
-  width: 10vw;
+  width: 9vw;
 
 }
 .shop .shop21 select{
@@ -1464,14 +1551,14 @@ border-radius: 1rem;
 .shopsec2{
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  gap: 1.35rem;
 }
 .shopsec2 > div{
   display: flex;
   flex-direction: row;
-  gap: 1.5rem;
+  gap: 1.35rem;
   overflow-x: auto ;
-  padding-bottom: 1rem;
+  padding-bottom: 0.9rem;
 }
 
 /* Login Page */
@@ -1486,27 +1573,29 @@ border-radius: 1rem;
   width: 80vw;
 
 overflow: hidden;
-padding: 1rem;
-border-radius: 1.5rem;
+padding: 0.9rem;
+border-radius: 1.35rem;
   border: 3px solid var(--border);
 
 }
 .login > div{
     background: var(--glass);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
     display: flex;
   flex-direction: row;
   height: 100%;
-  padding: 1.5rem;
-  border-radius: 1.5rem;
-  gap: 2rem;
+  padding: 1.35rem;
+  border-radius: 1.35rem;
+  gap: 1.8rem;
+  align-items: center;
 }
 .log2{
   width: 35vw;
+  height: 100%;
   overflow: hidden;
   position: relative;
-  border-radius: 1.5rem;
+  border-radius: 1.35rem;
 
 }
 .log2::before{
@@ -1524,8 +1613,8 @@ border-radius: 1.5rem;
   display: flex;
   flex-direction: column;
   align-items: start;
-  gap: 1rem;
-  margin-left: 2rem;
+  gap: 0.9rem;
+  margin-left: 1.8rem;
   padding-top: 4rem
 }
 .log2 h1{
@@ -1543,15 +1632,14 @@ border-radius: 1.5rem;
 
 .log{
   flex: 1;
-  margin-top: 1rem;
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 0.9rem;
 }
 .log form{
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  gap: 0.45rem;
 }
 
 .log a{
@@ -1564,12 +1652,12 @@ border-radius: 1.5rem;
 .log > button{
   width: 70%;
   align-self: center;
-  padding: 1rem;
+  padding: 0.9rem;
   border: none;
   background-color: #030363;
   color: var(--text-invert);
-  font-size: 1rem;
-  border-radius: 2rem;
+  font-size: 0.9rem;
+  border-radius: 1.8rem;
 }
 .signhr{
   width: 75%;
@@ -1578,7 +1666,7 @@ border-radius: 1.5rem;
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: 1rem;
+  gap: 0.9rem;
 }
 .signhr div{
   flex: 1;
@@ -1590,15 +1678,15 @@ border-radius: 1.5rem;
   display: flex;
   flex-direction: row;
   align-self: center;
-  gap: 1rem;
+  gap: 0.9rem;
 }
 .signbut button{
   height: 47px;
   width: 50px;
   border: none;
    background: var(--glass);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
   border-radius: 0.3rem;
   display: flex;
   align-items: center;
@@ -1614,6 +1702,17 @@ border-radius: 1.5rem;
   display: flex;
   flex-direction: row;
   align-self: center;
-  gap:0.5rem;
+  gap:0.45rem;
   align-items: center;
 }
+.loggrid{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.9rem;
+}
+.log .singrid{
+  display: grid;
+  grid-template-columns: 1fr 1fr ;
+  gap: 0.9rem;
+}
+

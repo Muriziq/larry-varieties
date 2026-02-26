@@ -167,5 +167,29 @@ thridCanvas()
 
 })
 
+  const hideIcon = "images/Group 50.svg";
+  const showIcon = "images/Vector (3).svg";
 
+if(page === "log" || page === "sign"){
+  const pwToggle = document.querySelectorAll(".pw-toggle")
+   const pw = document.querySelectorAll(".password");
+  pwToggle.forEach((toggle,i)=>{
+      const pwIcon = toggle.querySelector(".pw-Icon");
+  toggle.addEventListener("click", () => {
+    const isHidden = pw[i].type === "password";
 
+    // Switch input type
+    pw[i].type = isHidden ? "text" : "password";
+
+    // Switch icon
+    pwIcon.src = isHidden ? hideIcon : showIcon;
+
+    // Update accessibility
+    pwIcon.alt = isHidden ? "Hide password" : "Show password";
+    pwToggle.setAttribute("aria-pressed", isHidden ? "true" : "false");
+  });
+  })
+
+console.log(pwToggle)
+
+}
