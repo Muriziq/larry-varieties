@@ -6,26 +6,28 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Document</title>
   <link rel="stylesheet" href="style.css" />
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+
 </head>
 
-<!--
-  data-theme controls manual theming:
-  - "light" or "dark"
-  If empty, CSS will follow system preference (prefers-color-scheme).
--->
-<body data-theme="" data-page="index">
+
+<body data-page="index">
   <!-- ✅ HEADER is now a direct child of body (semantic + correct) -->
   <header class="site-header">
     <div class="logo">LV</div>
 
     <!-- Primary site navigation -->
-    <nav aria-label="Primary">
+    <div class="primary">
+      <button class="menu-btn">Menu &nbsp;&nbsp;☰</button>
+    <nav class="mobile-menu">
       <a href="index.html">Home</a>
       <a href="shop.html">Shop</a>
       <a href="shop.html#categories">Categories</a>
       <a href="seller.html">Sell</a>
       <a href="#contact">Contact</a>
-    </nav>
+    </nav>      
+    </div>
+
 
     <div class="icon-btn">
       <!-- Account -->
@@ -38,11 +40,6 @@
         <img src="images/Group.svg" alt="Cart" />
         <span class="cart-count">2</span>
       </a>
-
-      <!-- ✅ Dark mode toggle (manual) -->
-      <button class="theme-toggle" type="button" id="themeToggle" aria-pressed="false" title="Toggle dark mode">
-        🌓
-      </button>
     </div>
   </header>
 
@@ -52,14 +49,13 @@
       <div>
         <!-- Secondary navigation for featured categories -->
          <div class="firstnav">
-        <a href="shop.html"   aria-label="Featured categories">
+        <a  class="firstnav1" href="shop.html"   aria-label="Featured categories">
             <img src="images/Vector (2).svg" alt="">
         </a>
-    <nav class="firstnav2">
-      <a href="">Living</a>
+              <a href="">Living</a>
       <a href="">Bedroom</a>
       <a href="">Workspace</a>
-    </nav>
+
          </div>
 
         <!-- Hero section -->
@@ -217,6 +213,60 @@
                     </div>
                   </div>
                 </section>
+                <section class="second-cardsec">
+                  <div><img src="images/Oliver Sofa (72_ 1.svg" alt="" /></div>
+                  <div>
+                    <h3>2L Power Blender</h3>
+                    <div class="shape">
+                      <img src="images/Shape.svg" alt="" />
+                      <img src="images/Shape.svg" alt="" />
+                      <img src="images/Shape.svg" alt="" />
+                      <img src="images/Shape.svg" alt="" />
+                      <img src="images/Shape.svg" alt="" />
+                    </div>
+                    <h3>₦28,500</h3>
+                    <div class="card-button">
+                      <button type="button">Add To Cart</button>
+                      <button type="button" aria-label="Add to wishlist"><img src="images/Union.svg" alt="" /></button>
+                    </div>
+                  </div>
+                </section>
+                <section class="second-cardsec">
+                  <div><img src="images/Oliver Sofa (72_ 1.svg" alt="" /></div>
+                  <div>
+                    <h4>2L Power Blender</h4>
+                    <div class="shape">
+                      <img src="images/Shape.svg" alt="" />
+                      <img src="images/Shape.svg" alt="" />
+                      <img src="images/Shape.svg" alt="" />
+                      <img src="images/Shape.svg" alt="" />
+                      <img src="images/Shape.svg" alt="" />
+                    </div>
+                    <h3>₦28,500</h3>
+                    <div class="card-button">
+                      <button type="button">Add To Cart</button>
+                      <button type="button" aria-label="Add to wishlist"><img src="images/Union.svg" alt="" /></button>
+                    </div>
+                  </div>
+                </section>
+                <section class="second-cardsec">
+                  <div><img src="images/Oliver Sofa (72_ 1.svg" alt="" /></div>
+                  <div>
+                    <h3>2L Power Blender</h3>
+                    <div class="shape">
+                      <img src="images/Shape.svg" alt="" />
+                      <img src="images/Shape.svg" alt="" />
+                      <img src="images/Shape.svg" alt="" />
+                      <img src="images/Shape.svg" alt="" />
+                      <img src="images/Shape.svg" alt="" />
+                    </div>
+                    <h3>₦28,500</h3>
+                    <div class="card-button">
+                      <button type="button">Add To Cart</button>
+                      <button type="button" aria-label="Add to wishlist"><img src="images/Union.svg" alt="" /></button>
+                    </div>
+                  </div>
+                </section>
 
                 <section class="second-cardsec">
                   <div><img src="images/Oliver Sofa (72_ 1.svg" alt="" /></div>
@@ -307,6 +357,17 @@
     </article>
 
     <article class="third">
+            <section class="third2">
+        <div>
+          <h2>Today’s Offer</h2>
+          <span>Limited</span>
+        </div>
+        <p>Get <strong>10% off</strong> your first order when you subscribe.</p>
+        <div>
+          <input placeholder="Email address" />
+          <button type="button">Subscribe</button>
+        </div>
+      </section>
       <section class="third1">
         <h2>Need Help?</h2>
         <div>
@@ -325,17 +386,7 @@
         </div>
       </section>
 
-      <section class="third2">
-        <div>
-          <h2>Today’s Offer</h2>
-          <span>Limited</span>
-        </div>
-        <p>Get <strong>10% off</strong> your first order when you subscribe.</p>
-        <div>
-          <input placeholder="Email address" />
-          <button type="button">Subscribe</button>
-        </div>
-      </section>
+
     </article>
   </main>
 
@@ -389,27 +440,25 @@
     // Update year automatically
     document.getElementById("y").textContent = new Date().getFullYear();
 
-    // =========================
-    // Dark mode toggle (manual)
-    // =========================
-    const body = document.body;
-    const btn = document.getElementById("themeToggle");
+    document.querySelectorAll('.header1 a').forEach(link => {
+  link.addEventListener('click', function(e) {
+    e.preventDefault();
+    document.querySelector(this.getAttribute('href'))
+      .scrollIntoView({ behavior: 'smooth' });
+  });
+});
 
-    // Load saved theme if it exists
-    const savedTheme = localStorage.getItem("theme"); // "light" | "dark" | null
-    if (savedTheme) {
-      body.setAttribute("data-theme", savedTheme);
-      btn.setAttribute("aria-pressed", savedTheme === "dark" ? "true" : "false");
+const mobileMenu = document.querySelector(".mobile-menu");
+
+document.querySelector(".menu-btn").addEventListener("click", () => {
+    mobileMenu.classList.toggle("active")
+    const links = mobileMenu.querySelectorAll("a")
+    if(mobileMenu.classList.contains("active")){
+        gsap.fromTo(links,{opacity:0,y:20},{opacity:1,y:0,stagger:0.1})
+    }else{
+        gsap.fromTo(links,{opacity:1,y:0},{opacity:0,y:20,stagger:0.1})
     }
-
-    btn.addEventListener("click", () => {
-      const current = body.getAttribute("data-theme");
-      const next = current === "dark" ? "light" : "dark";
-
-      body.setAttribute("data-theme", next);
-      localStorage.setItem("theme", next);
-      btn.setAttribute("aria-pressed", next === "dark" ? "true" : "false");
-    });
+});
   </script>
 </body>
 </html>

@@ -38,6 +38,7 @@ function drawRoundedShape(points, radius,ctx) {
 
 // script.js
 function firstCanvas(){
+
   const canvas = document.querySelector(".first2 canvas");
   const first2 = document.querySelector(".first2").getBoundingClientRect();
   const firstNav = document.querySelector(".firstnav").getBoundingClientRect();
@@ -94,6 +95,7 @@ function firstCanvas(){
 }
 
 function secondCanvas(){
+    const mediaQuery = window.matchMedia("(max-width: 480px)");
 const points = [
   {x:0,y:0}
 ]
@@ -121,7 +123,11 @@ console.log(padding)
     ctx.beginPath();
     ctx.moveTo(0, 0);
             ctx.fillStyle = "#ffffff13";
+            if(mediaQuery.matches){
+   drawRoundedShape(points, 10, ctx);              
+            }else{
     drawRoundedShape(points, 30, ctx);
+            }
     ctx.fill();
     ctx.closePath()
 }
