@@ -1748,13 +1748,66 @@ border-radius: 1.35rem;
         display: flex;
     }
 .firstnav{
-flex-wrap: wrap;
+overflow-x: auto;
 width: 230px;
 font-size: 0.9rem;
-gap: 0.3rem;
+gap: 0.5rem;
+}
+.first2{
+  padding: 3rem 1rem;
+
+}
+.first2 h1{
+  font-size: 2.8rem;
+}
+.first3{
+  flex-direction: column;
+  gap: 0.7rem;
+  margin-top: 0;
+}
+.first3 > div{
+  height: auto;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+}
+.first3 > div > div:first-of-type{
+  width: 100%;
+  height: 50vw;
+}
+.first3 > :is(div:hover,div:active) > div:first-of-type{
+  border-radius: var(--radius-xl) var(--radius-xl) 0 0 ;
+}
+.first3 > div > div:last-of-type{
+  height: auto;
+  width: 100%;
+  border-radius: 0 0 var(--radius-xl) var(--radius-xl);
+  font-size: 0.6rem;
+
+}
+.second2,.second3{
+  margin: 1rem 0.5rem;
+}
+.second2{
+  gap: 1rem;
+}
+.second2 h2{
+  text-align: center;
+  font-size: 2.1rem;
+  font-weight: 600;
+}
+.glass-category-card{
+  gap: 0.9rem;
+}
+.thumb{
+  width: 70px;
+  height: 70px;
+  min-width: 70px;
+  max-height: 70px;
 }
 .grid-3{
   grid-template-columns: 1fr;
+  gap: 0.5rem;
 }
 .second3 h2{
   padding: 0.7rem 55px;
