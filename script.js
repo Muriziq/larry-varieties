@@ -33,7 +33,7 @@ function drawRoundedShape(points, radius,ctx) {
     ctx.closePath();
 
 }
-
+    const mediaQuery = window.matchMedia("(max-width: 480px)");
 
 
 // script.js
@@ -95,7 +95,7 @@ function firstCanvas(){
 }
 
 function secondCanvas(){
-    const mediaQuery = window.matchMedia("(max-width: 480px)");
+
 const points = [
   {x:0,y:0}
 ]
@@ -138,7 +138,7 @@ function thridCanvas(){
 const canvasSize  = canvas.getBoundingClientRect()
 canvas.width = canvasSize.width
 canvas.height = canvasSize.height
-  const padding = parseFloat(window.getComputedStyle(document.querySelector(".products1 > div:last-of-type")).paddingLeft)
+  const padding = parseFloat(window.getComputedStyle(document.querySelector(".products1 > div:last-of-type")).marginLeft) -10
   const paddingP = parseFloat(window.getComputedStyle(document.querySelector(".products1")).paddingLeft)
   const points = [
     {x:0,y:0},
@@ -153,7 +153,11 @@ canvas.height = canvasSize.height
   ctx.beginPath();
     ctx.moveTo(0, 0);
             ctx.fillStyle = "#ffffff13";
+            if(mediaQuery.matches){
+   drawRoundedShape(points, 20, ctx);              
+            }else{
     drawRoundedShape(points, 30, ctx);
+            }
     ctx.fill();
     ctx.closePath()
 }
@@ -199,3 +203,22 @@ if(page === "log" || page === "sign"){
 console.log(pwToggle)
 
 }
+
+    document.querySelectorAll('.header1 a').forEach(link => {
+  link.addEventListener('click', function(e) {
+    e.preventDefault();
+    document.querySelector(this.getAttribute('href'))
+      .scrollIntoView({ behavior: 'smooth' });
+  });
+});
+const mobileMenu = document.querySelector(".mobile-menu");
+
+document.querySelector(".menu-btn").addEventListener("click", () => {
+    mobileMenu.classList.toggle("active")
+    const links = mobileMenu.querySelectorAll("a")
+    if(mobileMenu.classList.contains("active")){
+        gsap.fromTo(links,{opacity:0,y:20},{opacity:1,y:0,stagger:0.1})
+    }else{
+        gsap.fromTo(links,{opacity:1,y:0},{opacity:0,y:20,stagger:0.1})
+    }
+});
