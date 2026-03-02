@@ -5,19 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+
 </head>
 <body>
-      <header class="site-header">
+  <header class="site-header">
     <div class="logo">LV</div>
 
     <!-- Primary site navigation -->
-    <nav aria-label="Primary">
+    <div class="primary">
+      <button class="menu-btn">Menu &nbsp;&nbsp;☰</button>
+    <nav class="mobile-menu">
       <a href="index.html">Home</a>
       <a href="shop.html">Shop</a>
       <a href="shop.html#categories">Categories</a>
       <a href="seller.html">Sell</a>
       <a href="#contact">Contact</a>
-    </nav>
+    </nav>      
+    </div>
+
 
     <div class="icon-btn">
       <!-- Account -->
@@ -30,11 +36,6 @@
         <img src="images/Group.svg" alt="Cart" />
         <span class="cart-count">2</span>
       </a>
-
-      <!-- ✅ Dark mode toggle (manual) -->
-      <button class="theme-toggle" type="button" id="themeToggle" aria-pressed="false" title="Toggle dark mode">
-        🌓
-      </button>
     </div>
   </header>
 
@@ -43,12 +44,11 @@
   <div>
     <div class="c-section-title">
       <h2>Your Cart</h2>
-      <p>Review items before checkout</p>
     </div>
 
     <div class="c-two-col">
       <!-- LEFT: Cart items -->
-      <div class="c-glass c-soft c-p-20">
+      <div class="c-carts">
         <div class="c-cart-item">
           <img
             alt=""
@@ -69,8 +69,6 @@
 
           <button type="button" class="c-btn c-btn-danger">Remove</button>
         </div>
-
-        <div class="c-spacer-10"></div>
 
         <div class="c-cart-item">
           <img
@@ -125,7 +123,7 @@
   </div>
 </div>
     </main>
-          <div class="asmall">© <span id="y"></span> Larry Varieties Stores</div>
-
+  <div class="asmall">© <span id="y"></span> Larry Varieties Stores</div>
+<script src="script.js"></script>
 </body>
 </html>

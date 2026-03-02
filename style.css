@@ -375,6 +375,7 @@ h1{
 .first21 button:last-of-type,.btn2{
   background-color: var(--btn-bg);
   color: var(--btn-text);
+  border: none;
 }
 
 /* -------------------------
@@ -654,6 +655,9 @@ h1{
   backdrop-filter: blur(18px);
   -webkit-backdrop-filter: blur(18px);
   padding: 1.8rem;
+    display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
 }
 
 .third1> div{
@@ -680,11 +684,7 @@ h1{
   line-height: 1.35rem;
 }
 
-.third2{
-  display: flex;
-  flex-direction: column;
-  gap: 0.45rem;
-}
+
 
 .third2 > div{
   display: flex;
@@ -1084,6 +1084,11 @@ padding:0.9rem 0.9rem;
   gap: 3rem;
   align-items:start;
 }
+.c-carts{
+ display: flex;
+ flex-direction: column;
+ gap: 1rem; 
+}
 .c-cart-item{
   display:flex;
   gap: 0.9rem;
@@ -1166,9 +1171,6 @@ padding:0.9rem 0.9rem;
   border-color: rgba(255,107,107,0.35);
   background: rgba(255,107,107,0.12);
 }
-
-/* Spacing helper for the 10px gap div */
-.c-spacer-10{ height: 10px; }
 
 /* Summary styles */
 .c-summary-title{
@@ -1580,6 +1582,13 @@ border-radius: 0.9rem;
 }
 .shopsec2 > div{
   display: flex;
+  flex-direction: column;
+}
+.shopsec2 h2{
+  font-size: 1.7rem;
+}
+.shopsec2 > div > div{
+  display: flex;
   flex-direction: row;
   gap: 1.35rem;
   overflow-x: auto ;
@@ -1740,6 +1749,9 @@ border-radius: 1.35rem;
   grid-template-columns: 1fr 1fr ;
   gap: 0.9rem;
 }
+.log h1{
+  font-size: 1.8rem;
+}
 
 
 @media (max-width: 480px){
@@ -1847,15 +1859,21 @@ gap: 0.5rem;
   gap: 1rem;
   margin: 1rem 0;
   padding: 0.8rem;
+
   align-items: center;
 }
 .third section{
   padding: 1rem;
 }
+.third1{
+    width: 100%;
+}
 .third1> div{
   grid-template-columns: 1fr;
   width: 100%;
   gap: 0.8rem;
+
+
 }
 
 .third1 > div > div{
@@ -1913,5 +1931,95 @@ min-height: 13vw;
 }
 .tab{
   font-size: 0.8rem;
+}
+.c-container,.c-summary,.ch-container{
+  padding: 1rem;
+}
+.c-two-col{
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.c-carts{
+  width: 100%;
+  text-wrap: nowrap;
+}
+.c-cart-item{
+  overflow-x: auto;
+  width: auto;
+  gap: 1rem;
+}
+
+/* Shop */
+.shop{
+  gap: 1rem;
+}
+.shopsec1{
+  gap: 0.5rem;
+  padding: 1rem;
+}
+.shop21 label{
+  font-size: 0.9rem;
+}
+.shop1{
+  width: 90%;
+}
+.shop2{
+  gap: 1rem;
+  overflow-x: auto;
+}
+.shop .shop21 input,.shop .shop21 select{
+  width: 70px;
+  min-width: 70px;
+  font-size: 0.9rem;
+}
+
+/* Account */
+
+.account-grid{
+  flex-direction: column;
+  gap: 1rem;
+}
+.sidebar-links,.account-profile{
+  width: 100%;
+}
+.form-grid{
+  grid-template-columns: 1fr;
+  row-gap: 0.5rem;
+}
+.loginmain{
+  height: auto;
+  padding: 2rem 0.5rem;
+}
+.login{
+width: 100%;
+height: auto;
+padding: 0.7rem;
+}
+.login > div{
+  flex-direction: column;
+  padding: 0.5rem;
+  gap: 1rem;
+
+}
+.log2{
+  height: auto;
+  width: 100%;
+}
+.log2 > div{
+  margin-left: 0;
+  padding: 2rem 1rem;
+}
+.log2 h1{
+  font-size: 2.5rem;
+}
+.log{
+  width: 100%;
+}
+
+.log .singrid{
+  grid-template-columns: 1fr;
+  gap: 0.3rem;
+
 }
 }
